@@ -21,13 +21,12 @@
 </head>
 
 <body>
-    <!-- Grey with black text
+    <!-- Grey with black text-->
     <?php
 	  include_once('inc_nav.php');
       //test below file to check if footer works. 
       //include_once('footer.php');
     ?>
-  -->
     <!--Comment out the nav bar later and change the extension to .php when using PHP. Start from here.-->
     <!--  <nav class="navbar navbar-dark bg-dark fixed-top">-->
     <!-- <nav class="navbar navbar-dark bg-dark">
