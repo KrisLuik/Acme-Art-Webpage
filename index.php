@@ -4,7 +4,8 @@
      ID: 30045325
      Description: creation of a multi-page client-server website for a local art gallery called Acme Arts.
   <! -- Required meta tags -->
-<meta charset="utf-8">
+  <head>
+    <meta charset="utf-8">
 <!-- Optimize code for mobile devices first and then scale up components as necessary using CSS media queries. -->
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Home</title>
@@ -24,7 +25,7 @@
     <!-- Grey with black text
     <?php
 	  include_once('inc_nav.php');
-      test below file to check if footer works. 
+      // test below file to check if footer works. 
       include_once('footer.php');
     ?>
   -->
@@ -75,8 +76,8 @@
                                     <li><a class="dropdown-item" href="#">Realism</a></li>
                                     <li><a class="dropdown-item" href="#">Clubism</a></li>
                                     <li><a class="dropdown-item" href="#">Surrealism</a></li>
-                                    <li>
                                 </ul>
+                            </li>
                             <li class="nav-item dropdown">
                                 <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
                                     aria-expanded="false">Paintings by Name</a>
@@ -103,7 +104,6 @@
                                     </li>
                                     <li><a class="dropdown-item" href="#">Search Bar here?</a></li>
                                 </ul>
-                            </li>
                             </li>
                         </ul>
                     </div>
