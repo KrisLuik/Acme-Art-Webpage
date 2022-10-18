@@ -133,13 +133,11 @@
     <div class="container-fluid" id="containerStyle">
         <table class="table table-hover" style="margin-top:20px;">
             <thead class="table-secondary">
-                <th>Id</th>
                 <th>Title</th>
-                <th>Painting</th>
                 <th>Year</th>
-                <th>Media</th>
                 <th>Artist</th>
                 <th>Style</th>
+                <th>Thumbnail</th>
             </thead>
             <tbody>
                 <!--PHP START-->
@@ -150,17 +148,15 @@
          $database = new Connection();
          $db = $database->open();
          try{	
-             $sql = "SELECT * FROM Painting_Data WHERE Artist = 'August Renoir'";
+             $sql = "SELECT Title, Year_Painted, Artist, Style, Painting FROM Painting_Data WHERE Artist = 'August Renoir'";
              foreach ($db->query($sql) as $row) {
                  ?>
                  <tr>
-                     <td><?php echo $row['Id']; ?></td>
                      <td><?php echo $row['Title']; ?></td>
-                     <td><?php echo '<img src="data:image/png;base64,'.base64_encode($row['Painting']).'"/>'; ?></td>
                      <td><?php echo $row['Year_Painted']; ?></td>
-                     <td><?php echo $row['Media']; ?></td>
                      <td><?php echo $row['Artist']; ?></td>
                      <td><?php echo $row['Style']; ?></td>
+                     <td><?php echo '<img class="thumb" src="data:image/png;base64,'.base64_encode($row['Painting']).'"/>'; ?></td>
                  </tr>
                  <?php 
              }

@@ -160,6 +160,7 @@
              $sql = 'SELECT Title, Year_Painted, Artist, Style, Painting FROM Painting_Data';
              foreach ($db->query($sql) as $row) {
                  ?>
+                 <tr>
                      <td><?php echo $row['Title']; ?></td>
                      <td><?php echo $row['Year_Painted']; ?></td>
                      <td><?php echo $row['Artist']; ?></td>
