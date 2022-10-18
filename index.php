@@ -2,9 +2,9 @@
 <html lang="en">
 <!-- Name: Kristiin Tribbeck
      ID: 30045325
-     Description: creation of a multi-page client-server website for a local art gallery called Acme Arts.
-  <! -- Required meta tags -->
-  <head>
+     Description: creation of a multi-page client-server website for a local art gallery called Acme Arts.-->
+<head>
+    <!-- Required meta tags -->
     <meta charset="utf-8">
 <!-- Optimize code for mobile devices first and then scale up components as necessary using CSS media queries. -->
 <meta name="viewport" content="width=device-width, initial-scale=1">
