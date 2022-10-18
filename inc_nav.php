@@ -25,14 +25,14 @@
                             <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
                                 aria-expanded="false">Paintings by Artist</a>
                             <ul class="dropdown-menu dropdown-menu-dark">
-                                <li><a class="dropdown-item" href="artist1.php">August Renoir</a></li>
-                                <li><a class="dropdown-item" href="artist2.php">Michelangelo</a></li>
-                                <li><a class="dropdown-item" href="artist3.php">Vincent Van Gogh</a></li>
-                                <li><a class="dropdown-item" href="artist4.php">Leonardo da Vinci</a></li>
-                                <li><a class="dropdown-item" href="artist5.php">Claude Monet</a></li>
-                                <li><a class="dropdown-item" href="artist6.php">Pablo Picasso</a></li>
-                                <li><a class="dropdown-item" href="artist7.php">Salvador Dali</a></li>
-                                <li><a class="dropdown-item" href="artist8.php">Paul Cezanne</a></li>
+                                <li><a class="dropdown-item" href="august-renoir.php">August Renoir</a></li>
+                                <li><a class="dropdown-item" href="michelangelo.php">Michelangelo</a></li>
+                                <li><a class="dropdown-item" href="vincent-van-gogh.php">Vincent Van Gogh</a></li>
+                                <li><a class="dropdown-item" href="leonardo-da-vinci.php">Leonardo da Vinci</a></li>
+                                <li><a class="dropdown-item" href="claude-monet.php">Claude Monet</a></li>
+                                <li><a class="dropdown-item" href="pablo-picasso.php">Pablo Picasso</a></li>
+                                <li><a class="dropdown-item" href="salvador-dali.php">Salvador Dali</a></li>
+                                <li><a class="dropdown-item" href="paul-cezanne.php">Paul Cezanne</a></li>
                             </ul>
                         </li>
                         <li class="nav-item dropdown">
