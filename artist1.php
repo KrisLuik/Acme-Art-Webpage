@@ -24,8 +24,8 @@
     <!-- Grey with black text
     <?php
 	  include_once('inc_nav.php');
-      test below file to check if footer works. 
-      include_once('footer.php');
+      //test below file to check if footer works. 
+      //include_once('footer.php');
     ?>
   -->
     <!--Comment out the nav bar later and change the extension to .php when using PHP. Start from here.-->
@@ -48,20 +48,20 @@
                     <div>
                         <ul class="nav flex-column">
                             <li class="nav-item">
-                                <a class="nav-link active" aria-current="page" href="#index.hmtl">Home</a>
+                                <a class="nav-link active" aria-current="page" href="index.php">Home</a>
                             </li>
                             <li class="nav-item dropdown">
                                 <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
                                     aria-expanded="false">All Paintings/All Artists</a>
                                 <ul class="dropdown-menu dropdown-menu-dark">
-                                    <li><a class="dropdown-item" href="#artist1.hmtl">August Renoir</a></li>
-                                    <li><a class="dropdown-item" href="#artist2.hmtl">Michelangelo</a></li>
-                                    <li><a class="dropdown-item" href="#artist3.hmtl">Vincent Van Goh</a></li>
-                                    <li><a class="dropdown-item" href="#artist4.hmtl">Leonardo Da Vinci</a></li>
-                                    <li><a class="dropdown-item" href="#artist5.hmtl">Claude Monet</a></li>
-                                    <li><a class="dropdown-item" href="#artist6.hmtl">Pablo Picasso</a></li>
-                                    <li><a class="dropdown-item" href="#artist7.hmtl">Salvador Dali</a></li>
-                                    <li><a class="dropdown-item" href="#artist8.hmtl">Paul Cezanne</a></li>
+                                    <li><a class="dropdown-item" href="artist1.php">August Renoir</a></li>
+                                    <li><a class="dropdown-item" href="artist2.php">Michelangelo</a></li>
+                                    <li><a class="dropdown-item" href="artist3.php">Vincent Van Goh</a></li>
+                                    <li><a class="dropdown-item" href="artist4.php">Leonardo Da Vinci</a></li>
+                                    <li><a class="dropdown-item" href="artist5.php">Claude Monet</a></li>
+                                    <li><a class="dropdown-item" href="artist6.php">Pablo Picasso</a></li>
+                                    <li><a class="dropdown-item" href="artist7.php">Salvador Dali</a></li>
+                                    <li><a class="dropdown-item" href="artist8.php">Paul Cezanne</a></li>
                                 </ul>
                             </li>
                             <li class="nav-item dropdown">
@@ -82,22 +82,22 @@
                                     aria-expanded="false">Paintings by Name</a>
                                 <ul class="dropdown-menu dropdown-menu-dark">
                                     <li><a class="dropdown-item" href="#"></a></li>
-                                    <li><a class="dropdown-item" href="#artist6.hmtl">At the Lapin Agile</a></li>
-                                    <li><a class="dropdown-item" href="#artist1.hmtl">Bal du moulin de la Galette</a></li>
-                                    <li><a class="dropdown-item" href="#artist3.hmtl">Cafe Terrace at Night</a></li>
-                                    <li><a class="dropdown-item" href="#artist2.hmtl">Doni Tondo (Doni Madonna)</a></li>
-                                    <li><a class="dropdown-item" href="#artist5.hmtl">Houses of Parliament</a></li>
-                                    <li><a class="dropdown-item" href="##artist8.hmtl">Jaz de Bouffan</a></li>
-                                    <li><a class="dropdown-item" href="#artist4.hmtl">Mona Lisa</a></li>
-                                    <li><a class="dropdown-item" href="#artist6.hmtl">Nature morte au compotier</a></li>
-                                    <li><a class="dropdown-item" href="#artist5.hmtl">Sunrise</a></li>
-                                    <li><a class="dropdown-item" href="#artist7.hmtl">The Hallucinogenic Toreador</a></li>
-                                    <li><a class="dropdown-item" href="#artist7.hmtl">The Persistence of Memory</a></li>
-                                    <li><a class="dropdown-item" href="#artist3.hmtl">The Kingfisher</a></li>
-                                    <li><a class="dropdown-item" href="#artist3.hmtl">The Potato Eaters</a></li>
-                                    <li><a class="dropdown-item" href="#artist3.hmtl">Vase with Twelve Sunflowers</a></li>
-                                    <li><a class="dropdown-item" href="#artist4.hmtl">Vitruvian Man</a></li>
-                                    <li><a class="dropdown-item" href="#artist3.hmtl">Weaver</a></li>
+                                    <li><a class="dropdown-item" href="artist6.php">At the Lapin Agile</a></li>
+                                    <li><a class="dropdown-item" href="artist1.php">Bal du moulin de la Galette</a></li>
+                                    <li><a class="dropdown-item" href="artist3.php">Cafe Terrace at Night</a></li>
+                                    <li><a class="dropdown-item" href="artist2.php">Doni Tondo (Doni Madonna)</a></li>
+                                    <li><a class="dropdown-item" href="artist5.php">Houses of Parliament</a></li>
+                                    <li><a class="dropdown-item" href="artist8.php">Jaz de Bouffan</a></li>
+                                    <li><a class="dropdown-item" href="artist4.php">Mona Lisa</a></li>
+                                    <li><a class="dropdown-item" href="artist6.php">Nature morte au compotier</a></li>
+                                    <li><a class="dropdown-item" href="artist5.php">Sunrise</a></li>
+                                    <li><a class="dropdown-item" href="artist7.php">The Hallucinogenic Toreador</a></li>
+                                    <li><a class="dropdown-item" href="artist7.php">The Persistence of Memory</a></li>
+                                    <li><a class="dropdown-item" href="artist3.php">The Kingfisher</a></li>
+                                    <li><a class="dropdown-item" href="artist3.php">The Potato Eaters</a></li>
+                                    <li><a class="dropdown-item" href="artist3.php">Vase with Twelve Sunflowers</a></li>
+                                    <li><a class="dropdown-item" href="artist4.php">Vitruvian Man</a></li>
+                                    <li><a class="dropdown-item" href="artist3.php">Weaver</a></li>
                                     <li>
                                         <hr class="dropdown-divider">
                                     </li>
@@ -116,7 +116,7 @@
         </div>
     </nav>
     <!--Comment out the nav bar later and change the extension to .php when using PHP. End here.-->
-    <!--
+    <!-- PHP START -->
  <?php 
  session_start();
  if(isset($_SESSION['message'])){
@@ -129,7 +129,7 @@
      unset($_SESSION['message']);
  }
 ?>
-FINISH PHP-->
+<!--FINISH PHP-->
 
     <!--Start of table.-->
     <div class="container-fluid" id="containerStyle">
@@ -144,7 +144,7 @@ FINISH PHP-->
                 <th>Style</th>
             </thead>
             <tbody>
-                <!--PHP START
+                <!--PHP START-->
      <?php
          //include our connection
          include_once('connection.php');
@@ -152,14 +152,14 @@ FINISH PHP-->
          $database = new Connection();
          $db = $database->open();
          try{	
-             $sql = 'SELECT * FROM content WHERE id = 1';
+             $sql = 'SELECT * FROM Painting_Data WHERE Id = 1';
              foreach ($db->query($sql) as $row) {
                  ?>
                  <tr>
                      <td><?php echo $row['Id']; ?></td>
                      <td><?php echo $row['Title']; ?></td>
-                     <td><?php echo $row['Painting']; ?></td>
-                     <td><?php echo $row['Year']; ?></td>
+                     <td><?php echo '<img src="data:image/png;base64,'.base64_encode($row['Painting']).'"/>'; ?></td>
+                     <td><?php echo $row['Year_Painted']; ?></td>
                      <td><?php echo $row['Media']; ?></td>
                      <td><?php echo $row['Artist']; ?></td>
                      <td><?php echo $row['Style']; ?></td>
@@ -173,7 +173,7 @@ FINISH PHP-->
          //close connection
          $database->close();
      ?>
-    FINISH PHP-->
+    <!--FINISH PHP-->
             </tbody>
         </table>
     </div>
