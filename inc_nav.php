@@ -49,7 +49,7 @@
                                 <li><a class="dropdown-item" href="#">Still-life</a></li>
                                 <li><a class="dropdown-item" href="#">Portrait</a></li>
                                 <li><a class="dropdown-item" href="#">Realism</a></li>
-                                <li><a class="dropdown-item" href="#">Clubism</a></li>
+                                <li><a class="dropdown-item" href="#">Cubism</a></li>
                                 <li><a class="dropdown-item" href="#">Surrealism</a></li>
                             </ul>
                         </li>

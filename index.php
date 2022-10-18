@@ -26,7 +26,7 @@
     <?php
 	  include_once('inc_nav.php');
       // test below file to check if footer works. 
-      include_once('footer.php');
+      // include_once('footer.php');
     ?>
     <!--Comment out the nav bar later and change the extension to .php when using PHP. Start from here.-->
     <!--  <nav class="navbar navbar-dark bg-dark fixed-top">-->
@@ -54,14 +54,14 @@
                                 <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
                                     aria-expanded="false">All Paintings/All Artists</a>
                                 <ul class="dropdown-menu dropdown-menu-dark">
-                                    <li><a class="dropdown-item" href="#artist1.hmtl">August Renoir</a></li>
-                                    <li><a class="dropdown-item" href="#artist2.hmtl">Michelangelo</a></li>
-                                    <li><a class="dropdown-item" href="#artist3.hmtl">Vincent Van Goh</a></li>
-                                    <li><a class="dropdown-item" href="#artist4.hmtl">Leonardo Da Vinci</a></li>
-                                    <li><a class="dropdown-item" href="#artist5.hmtl">Claude Monet</a></li>
-                                    <li><a class="dropdown-item" href="#artist6.hmtl">Pablo Picasso</a></li>
-                                    <li><a class="dropdown-item" href="#artist7.hmtl">Salvador Dali</a></li>
-                                    <li><a class="dropdown-item" href="#artist8.hmtl">Paul Cezanne</a></li>
+                                    <li><a class="dropdown-item" href="artist1.php">August Renoir</a></li>
+                                    <li><a class="dropdown-item" href="artist2.php">Michelangelo</a></li>
+                                    <li><a class="dropdown-item" href="artist3.php">Vincent Van Gogh</a></li>
+                                    <li><a class="dropdown-item" href="artist4.php">Leonardo Da Vinci</a></li>
+                                    <li><a class="dropdown-item" href="artist5.php">Claude Monet</a></li>
+                                    <li><a class="dropdown-item" href="artist6.php">Pablo Picasso</a></li>
+                                    <li><a class="dropdown-item" href="artist7.php">Salvador Dali</a></li>
+                                    <li><a class="dropdown-item" href="artist8.php">Paul Cezanne</a></li>
                                 </ul>
                             </li>
                             <li class="nav-item dropdown">
@@ -73,7 +73,7 @@
                                     <li><a class="dropdown-item" href="#">Still-life</a></li>
                                     <li><a class="dropdown-item" href="#">Portrait</a></li>
                                     <li><a class="dropdown-item" href="#">Realism</a></li>
-                                    <li><a class="dropdown-item" href="#">Clubism</a></li>
+                                    <li><a class="dropdown-item" href="#">Cubism</a></li>
                                     <li><a class="dropdown-item" href="#">Surrealism</a></li>
                                 </ul>
                             </li>
