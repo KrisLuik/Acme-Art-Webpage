@@ -51,8 +51,8 @@
                                 <li><a class="dropdown-item" href="#">Realism</a></li>
                                 <li><a class="dropdown-item" href="#">Clubism</a></li>
                                 <li><a class="dropdown-item" href="#">Surrealism</a></li>
-                                <li>
                             </ul>
+                        </li>
                         <li class="nav-item dropdown">
                             <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
                                 aria-expanded="false">Paintings by Name</a>
@@ -79,7 +79,6 @@
                                 </li>
                                 <li><a class="dropdown-item" href="#">Search Bar here?</a></li>
                             </ul>
-                        </li>
                         </li>
                     </ul>
                 </div>
