@@ -18,9 +18,12 @@
                         <li class="nav-item">
                             <a class="nav-link active" aria-current="page" href="#">Home</a>
                         </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">All Paintings</a>
+                        </li>
                         <li class="nav-item dropdown">
                             <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
-                                aria-expanded="false">All Paintings</a>
+                                aria-expanded="false">All Artists</a>
                             <ul class="dropdown-menu dropdown-menu-dark">
                                 <li><a class="dropdown-item" href="#">Full details 1</a></li>
                                 <li><a class="dropdown-item" href="#">Full details 2</a></li>
