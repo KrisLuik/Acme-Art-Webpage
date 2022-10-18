@@ -39,13 +39,13 @@
                             <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
                                 aria-expanded="false">Paintings by Style</a>
                             <ul class="dropdown-menu dropdown-menu-dark">
-                                <li><a class="dropdown-item" href="#">Impressionism</a></li>
-                                <li><a class="dropdown-item" href="#">Mannerism</a></li>
-                                <li><a class="dropdown-item" href="#">Still-life</a></li>
-                                <li><a class="dropdown-item" href="#">Portrait</a></li>
-                                <li><a class="dropdown-item" href="#">Realism</a></li>
-                                <li><a class="dropdown-item" href="#">Cubism</a></li>
-                                <li><a class="dropdown-item" href="#">Surrealism</a></li>
+                                <li><a class="dropdown-item" href="impressionism.php">Impressionism</a></li>
+                                <li><a class="dropdown-item" href="mannerism.php">Mannerism</a></li>
+                                <li><a class="dropdown-item" href="still-life.php">Still-life</a></li>
+                                <li><a class="dropdown-item" href="portrait.php">Portrait</a></li>
+                                <li><a class="dropdown-item" href="realism.php">Realism</a></li>
+                                <li><a class="dropdown-item" href="cubism.php">Cubism</a></li>
+                                <li><a class="dropdown-item" href="surrealism.php">Surrealism</a></li>
                             </ul>
                         </li>
                         <li class="nav-item dropdown">
