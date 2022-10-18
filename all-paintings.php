@@ -31,7 +31,7 @@
   -->
     <!--Comment out the nav bar later and change the extension to .php when using PHP. Start from here.-->
     <!--  <nav class="navbar navbar-dark bg-dark fixed-top">-->
-    <nav class="navbar navbar-dark bg-dark">
+    <!-- <nav class="navbar navbar-dark bg-dark">
         <div class="container-fluid">
             <a class="navbar-brand" href="#">Acme Art Gallery</a>
             <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas"
@@ -123,7 +123,7 @@
                 </div>
             </div>
         </div>
-    </nav>
+    </nav> -->
     <!--Comment out the nav bar later and change the extension to .php when using PHP. End here.-->
   <!-- START PHP -->
  <?php 
@@ -161,7 +161,7 @@
          $database = new Connection();
          $db = $database->open();
          try{	
-             $sql = 'SELECT * FROM Painting_Data WHERE Id = 1';
+             $sql = 'SELECT * FROM Painting_Data';
              foreach ($db->query($sql) as $row) {
                  ?>
                      <td><?php echo $row['Id']; ?></td>

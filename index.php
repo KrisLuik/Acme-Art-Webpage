@@ -30,7 +30,7 @@
     ?>
     <!--Comment out the nav bar later and change the extension to .php when using PHP. Start from here.-->
     <!--  <nav class="navbar navbar-dark bg-dark fixed-top">-->
-    <nav class="navbar navbar-dark bg-dark">
+    <!-- <nav class="navbar navbar-dark bg-dark">
         <div class="container-fluid">
             <a class="navbar-brand" href="#">Acme Art Gallery</a>
             <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas"
@@ -116,7 +116,7 @@
                 </div>
             </div>
         </div>
-    </nav>
+    </nav> -->
     <!--Comment out the nav bar later and change the extension to .php when using PHP. End here.-->
     <!--MAIN BODY START (Make it into a separate file as well (?) i.e., like the navbar)-->
     <div class="container-fluid" id="containerStyle">
