@@ -159,8 +159,9 @@
          $query = $_POST['query'];
          try{	
              $sql = "SELECT * FROM Painting_Data WHERE Title LIKE '$query%'";
-             foreach ($db->query($sql) as $row) {
-                 ?>
+             $result = $db->query($sql);
+             if($result->rowCount() > 0) {
+                ?>
                  <tr>
                      <td><?php echo $row['Title']; ?></td>
                      <td><?php echo $row['Year_Painted']; ?></td>
@@ -169,6 +170,9 @@
                      <td><?php echo $row['Style']; ?></td>
                  </tr>
                  <?php 
+             }
+             else {
+                 echo "No results found";
              }
          }
          catch(PDOException $e){
