@@ -8,7 +8,7 @@
 <meta charset="utf-8">
 <!-- Optimize code for mobile devices first and then scale up components as necessary using CSS media queries. -->
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Home</title>
+<title>Paul Cezanne | Assessment Three</title>
 <!-- Linking HTML to CSS -->
 <link rel="stylesheet" href="assessment_3.css">
 <!-- Bootstrap CSS -->
@@ -18,7 +18,6 @@
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
     integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
     crossorigin="anonymous"></script>
-<title>Assessment Three</title>
 </head>
 
 <body>
