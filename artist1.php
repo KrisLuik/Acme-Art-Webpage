@@ -151,7 +151,7 @@
          $database = new Connection();
          $db = $database->open();
          try{	
-             $sql = 'SELECT * FROM Painting_Data WHERE Id = 1';
+             $sql = "SELECT * FROM Painting_Data WHERE Artist = 'August Renoir'";
              foreach ($db->query($sql) as $row) {
                  ?>
                  <tr>
