@@ -160,12 +160,12 @@
          $database = new Connection();
          $db = $database->open();
          try{	
-             $sql = 'SELECT * FROM Painting_Data';
+             $sql = 'SELECT Title, Year_Painted, Artist, Style, Painting FROM Painting_Data';
              foreach ($db->query($sql) as $row) {
                  ?>
                      <td><?php echo $row['Id']; ?></td>
                      <td><?php echo $row['Title']; ?></td>
-                     <td><?php echo '<img src="data:image/png;base64,'.base64_encode($row['Painting']).'"/>'; ?></td>
+                     <td><?php echo '<img class="thumb" src="data:image/png;base64,'.base64_encode($row['Painting']).'"/>'; ?></td>
                      <td><?php echo $row['Year_Painted']; ?></td>
                      <td><?php echo $row['Media']; ?></td>
                      <td><?php echo $row['Artist']; ?></td>
