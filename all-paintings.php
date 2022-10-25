@@ -140,6 +140,12 @@
 
   <!--Start of table.-->
   <div class="container-fluid" id="containerStyle">
+      <!--Testing Search bar Start -->
+  <form class="d-flex mt-3" role="search" action="searchPaintings.php" method="GET">
+        <input class="form-control me-2" type="text" name="search" placeholder="Search" aria-label="Search">
+        <button class="btn btn-success" type="submit">Search</button>
+    </form>
+<!--Search Bar Finish -->
     <table class="table table-hover" style="margin-top:20px;">
       <thead class="table-secondary">
         <th>Title</th>
