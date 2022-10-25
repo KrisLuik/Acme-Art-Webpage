@@ -3,12 +3,12 @@
 <!-- Name: Kristiin Tribbeck
      ID: 30045325
      Description: creation of a multi-page client-server website for a local art gallery called Acme Arts.-->
-<head>
-    <!-- Required meta tags -->
-    <meta charset="utf-8">
+<head>  
+     <!-- Required meta tags -->
+<meta charset="utf-8">
 <!-- Optimize code for mobile devices first and then scale up components as necessary using CSS media queries. -->
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Home | Assessment Three</title>
+<title>Pablo Picasso | Assessment Three</title>
 <!-- Linking HTML to CSS -->
 <link rel="stylesheet" href="assessment_3.css">
 <!-- Bootstrap CSS -->
@@ -21,11 +21,11 @@
 </head>
 
 <body>
-    <!-- Grey with black text -->
+    <!-- Grey with black text-->
     <?php
 	  include_once('inc_nav.php');
-      // test below file to check if footer works. 
-      // include_once('footer.php');
+      /* test below file to check if footer works. 
+      include_once('footer.php'); */
     ?>
     <!--Comment out the nav bar later and change the extension to .php when using PHP. Start from here.-->
     <!--  <nav class="navbar navbar-dark bg-dark fixed-top">-->
@@ -47,23 +47,20 @@
                     <div>
                         <ul class="nav flex-column">
                             <li class="nav-item">
-                                <a class="nav-link active" aria-current="page" href="#">Home</a>
-                            </li>
-                            <li class="nav-item">
-                                <a class="nav-link" href="#">All Paintings</a>
+                                <a class="nav-link active" aria-current="page" href="#index.hmtl">Home</a>
                             </li>
                             <li class="nav-item dropdown">
                                 <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
-                                    aria-expanded="false">All Artists</a>
+                                    aria-expanded="false">All Paintings/All Artists</a>
                                 <ul class="dropdown-menu dropdown-menu-dark">
-                                    <li><a class="dropdown-item" href="artist1.php">August Renoir</a></li>
-                                    <li><a class="dropdown-item" href="artist2.php">Michelangelo</a></li>
-                                    <li><a class="dropdown-item" href="artist3.php">Vincent Van Gogh</a></li>
-                                    <li><a class="dropdown-item" href="artist4.php">Leonardo Da Vinci</a></li>
-                                    <li><a class="dropdown-item" href="artist5.php">Claude Monet</a></li>
-                                    <li><a class="dropdown-item" href="artist6.php">Pablo Picasso</a></li>
-                                    <li><a class="dropdown-item" href="artist7.php">Salvador Dali</a></li>
-                                    <li><a class="dropdown-item" href="artist8.php">Paul Cezanne</a></li>
+                                    <li><a class="dropdown-item" href="#artist1.hmtl">August Renoir</a></li>
+                                    <li><a class="dropdown-item" href="#artist2.hmtl">Michelangelo</a></li>
+                                    <li><a class="dropdown-item" href="#artist3.hmtl">Vincent Van Goh</a></li>
+                                    <li><a class="dropdown-item" href="#artist4.hmtl">Leonardo Da Vinci</a></li>
+                                    <li><a class="dropdown-item" href="#artist5.hmtl">Claude Monet</a></li>
+                                    <li><a class="dropdown-item" href="#artist6.hmtl">Pablo Picasso</a></li>
+                                    <li><a class="dropdown-item" href="#artist7.hmtl">Salvador Dali</a></li>
+                                    <li><a class="dropdown-item" href="#artist8.hmtl">Paul Cezanne</a></li>
                                 </ul>
                             </li>
                             <li class="nav-item dropdown">
@@ -75,10 +72,10 @@
                                     <li><a class="dropdown-item" href="#">Still-life</a></li>
                                     <li><a class="dropdown-item" href="#">Portrait</a></li>
                                     <li><a class="dropdown-item" href="#">Realism</a></li>
-                                    <li><a class="dropdown-item" href="#">Cubism</a></li>
+                                    <li><a class="dropdown-item" href="#">Clubism</a></li>
                                     <li><a class="dropdown-item" href="#">Surrealism</a></li>
+                                    <li>
                                 </ul>
-                            </li>
                             <li class="nav-item dropdown">
                                 <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
                                     aria-expanded="false">Paintings by Name</a>
@@ -106,6 +103,7 @@
                                     <li><a class="dropdown-item" href="#">Search Bar here?</a></li>
                                 </ul>
                             </li>
+                            </li>
                         </ul>
                     </div>
                     <form class="d-flex mt-3" role="search">
@@ -117,27 +115,73 @@
         </div>
     </nav> -->
     <!--Comment out the nav bar later and change the extension to .php when using PHP. End here.-->
-    <!--MAIN BODY START (Make it into a separate file as well (?) i.e., like the navbar)-->
+    <!--PHP START-->
+ <?php 
+ session_start();
+ if(isset($_SESSION['message'])){
+     ?>
+     <div class="alert alert-info text-center" style="margin-top:20px;">
+         <?php echo $_SESSION['message']; ?>
+     </div>
+     <?php
+
+     unset($_SESSION['message']);
+ }
+?>
+<!--FINISH PHP-->
+
+    <!--Start of table.-->
     <div class="container-fluid" id="containerStyle">
-        <div class="p-3 my-3 border border-info rounded">
-            <h2>Assessment Three Group Project</h2>
-            <p class="lead">Name: Kristiin Tribbeck<br>
-                ID: 30045325<br>
-                Assessment details: This website utilises the Bootstrap framework to display of a multi-page
-                client-server website
-                for a local art gallery called Acme Arts. The knowledge base data is hosted on a MySQL server
-                which populates the various web pages. </p>
-        </div>
+        <table class="table table-hover" style="margin-top:20px;">
+            <thead class="table-secondary">
+              <th>Title</th>
+              <th>Year</th>
+              <th>Artist</th>
+              <th>Style</th>
+              <th>Thumbnail</th>
+            </thead>
+            <tbody>
+                <!--PHP START-->
+     <?php
+         //include our connection
+         include_once('connection.php');
+
+         $database = new Connection();
+         $db = $database->open();
+         try{	
+             $sql = "SELECT Title, Year_Painted, Artist, Style, Painting FROM Painting_Data WHERE Artist = 'Pablo Picasso'";
+             foreach ($db->query($sql) as $row) {
+                 ?>
+                 <tr>
+                     <td><?php echo $row['Title']; ?></td>
+                     <td><?php echo $row['Year_Painted']; ?></td>
+                     <td><?php echo $row['Artist']; ?></td>
+                     <td><?php echo $row['Style']; ?></td>
+                     <td><?php echo '<img class="thumb" src="data:image/png;base64,'.base64_encode($row['Painting']).'"/>'; ?></td>
+                 </tr>
+                 <?php 
+             }
+         }
+         catch(PDOException $e){
+             echo "There is some problem in connection: " . $e->getMessage();
+         }
+         //close connection
+         $database->close();
+     ?>
+    <!--FINISH PHP-->
+            </tbody>
+        </table>
     </div>
-    <!--MAIN BODY END -->
-    <!--FOOTER START -->
-    <footer>
+    <!-- <footer>
         <div class="row">
             <div class="col-md-6 ms-2">
                 <p>Copyright &copy; Kristiin Tribbeck </p>
             </div>
         </div>
-    </footer>
+    </footer> -->
+    <?php
+    include_once('footer.php');
+    ?>
     <!--FOOTER END -->
 </body>
 

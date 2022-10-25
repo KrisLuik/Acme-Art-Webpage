@@ -2,12 +2,13 @@
 <html lang="en">
 <!-- Name: Kristiin Tribbeck
      ID: 30045325
-     Description: creation of a multi-page client-server website for a local art gallery called Acme Arts.
-  <! -- Required meta tags -->
+     Description: creation of a multi-page client-server website for a local art gallery called Acme Arts.-->
+<head>
+     <!-- Required meta tags -->
 <meta charset="utf-8">
 <!-- Optimize code for mobile devices first and then scale up components as necessary using CSS media queries. -->
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Home</title>
+<title>Salvador Dali | Assessment Three</title>
 <!-- Linking HTML to CSS -->
 <link rel="stylesheet" href="assessment_3.css">
 <!-- Bootstrap CSS -->
@@ -17,20 +18,18 @@
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
     integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
     crossorigin="anonymous"></script>
-<title>Assessment Three</title>
 </head>
 
 <body>
-    <!-- Grey with black text
+    <!-- Grey with black text-->
     <?php
 	  include_once('inc_nav.php');
-      test below file to check if footer works. 
-      include_once('footer.php');
+      /* test below file to check if footer works. 
+      include_once('footer.php'); */
     ?>
-  -->
     <!--Comment out the nav bar later and change the extension to .php when using PHP. Start from here.-->
     <!--  <nav class="navbar navbar-dark bg-dark fixed-top">-->
-    <nav class="navbar navbar-dark bg-dark">
+    <!-- <nav class="navbar navbar-dark bg-dark">
         <div class="container-fluid">
             <a class="navbar-brand" href="#">Acme Art Gallery</a>
             <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas"
@@ -82,22 +81,22 @@
                                     aria-expanded="false">Paintings by Name</a>
                                 <ul class="dropdown-menu dropdown-menu-dark">
                                     <li><a class="dropdown-item" href="#"></a></li>
-                                    <li><a class="dropdown-item" href="#artist6.hmtl">At the Lapin Agile</a></li>
-                                    <li><a class="dropdown-item" href="#artist1.hmtl">Bal du moulin de la Galette</a></li>
-                                    <li><a class="dropdown-item" href="#artist3.hmtl">Cafe Terrace at Night</a></li>
-                                    <li><a class="dropdown-item" href="#artist2.hmtl">Doni Tondo (Doni Madonna)</a></li>
-                                    <li><a class="dropdown-item" href="#artist5.hmtl">Houses of Parliament</a></li>
-                                    <li><a class="dropdown-item" href="##artist8.hmtl">Jaz de Bouffan</a></li>
-                                    <li><a class="dropdown-item" href="#artist4.hmtl">Mona Lisa</a></li>
-                                    <li><a class="dropdown-item" href="#artist6.hmtl">Nature morte au compotier</a></li>
-                                    <li><a class="dropdown-item" href="#artist5.hmtl">Sunrise</a></li>
-                                    <li><a class="dropdown-item" href="#artist7.hmtl">The Hallucinogenic Toreador</a></li>
-                                    <li><a class="dropdown-item" href="#artist7.hmtl">The Persistence of Memory</a></li>
-                                    <li><a class="dropdown-item" href="#artist3.hmtl">The Kingfisher</a></li>
-                                    <li><a class="dropdown-item" href="#artist3.hmtl">The Potato Eaters</a></li>
-                                    <li><a class="dropdown-item" href="#artist3.hmtl">Vase with Twelve Sunflowers</a></li>
-                                    <li><a class="dropdown-item" href="#artist4.hmtl">Vitruvian Man</a></li>
-                                    <li><a class="dropdown-item" href="#artist3.hmtl">Weaver</a></li>
+                                    <li><a class="dropdown-item" href="#">At the Lapin Agile</a></li>
+                                    <li><a class="dropdown-item" href="#">Bal du moulin de la Galette</a></li>
+                                    <li><a class="dropdown-item" href="#">Cafe Terrace at Night</a></li>
+                                    <li><a class="dropdown-item" href="#">Doni Tondo (Doni Madonna)</a></li>
+                                    <li><a class="dropdown-item" href="#">Houses of Parliament</a></li>
+                                    <li><a class="dropdown-item" href="#">Jaz de Bouffan</a></li>
+                                    <li><a class="dropdown-item" href="#">Mona Lisa</a></li>
+                                    <li><a class="dropdown-item" href="#">Nature morte au compotier</a></li>
+                                    <li><a class="dropdown-item" href="#">Sunrise</a></li>
+                                    <li><a class="dropdown-item" href="#">The Hallucinogenic Toreador</a></li>
+                                    <li><a class="dropdown-item" href="#">The Persistence of Memory</a></li>
+                                    <li><a class="dropdown-item" href="#">The Kingfisher</a></li>
+                                    <li><a class="dropdown-item" href="#">The Potato Eaters</a></li>
+                                    <li><a class="dropdown-item" href="#">Vase with Twelve Sunflowers</a></li>
+                                    <li><a class="dropdown-item" href="#">Vitruvian Man</a></li>
+                                    <li><a class="dropdown-item" href="#">Weaver</a></li>
                                     <li>
                                         <hr class="dropdown-divider">
                                     </li>
@@ -114,9 +113,9 @@
                 </div>
             </div>
         </div>
-    </nav>
+    </nav> -->
     <!--Comment out the nav bar later and change the extension to .php when using PHP. End here.-->
-    <!--
+    <!--PHP START-->
  <?php 
  session_start();
  if(isset($_SESSION['message'])){
@@ -129,22 +128,20 @@
      unset($_SESSION['message']);
  }
 ?>
-FINISH PHP-->
+<!--FINISH PHP-->
 
     <!--Start of table.-->
     <div class="container-fluid" id="containerStyle">
         <table class="table table-hover" style="margin-top:20px;">
             <thead class="table-secondary">
-                <th>Id</th>
                 <th>Title</th>
-                <th>Painting</th>
                 <th>Year</th>
-                <th>Media</th>
                 <th>Artist</th>
                 <th>Style</th>
+                <th>Thumbnail</th>
             </thead>
             <tbody>
-                <!--PHP START
+                <!--PHP START-->
      <?php
          //include our connection
          include_once('connection.php');
@@ -152,17 +149,15 @@ FINISH PHP-->
          $database = new Connection();
          $db = $database->open();
          try{	
-             $sql = 'SELECT * FROM content WHERE id = 1';
+             $sql = "SELECT Title, Year_Painted, Artist, Style, Painting FROM Painting_Data WHERE Artist = 'Salvador Dali'";
              foreach ($db->query($sql) as $row) {
                  ?>
                  <tr>
-                     <td><?php echo $row['Id']; ?></td>
                      <td><?php echo $row['Title']; ?></td>
-                     <td><?php echo $row['Painting']; ?></td>
-                     <td><?php echo $row['Year']; ?></td>
-                     <td><?php echo $row['Media']; ?></td>
+                     <td><?php echo $row['Year_Painted']; ?></td>
                      <td><?php echo $row['Artist']; ?></td>
                      <td><?php echo $row['Style']; ?></td>
+                     <td><?php echo '<img class="thumb" src="data:image/png;base64,'.base64_encode($row['Painting']).'"/>'; ?></td>
                  </tr>
                  <?php 
              }
@@ -173,17 +168,20 @@ FINISH PHP-->
          //close connection
          $database->close();
      ?>
-    FINISH PHP-->
+    <!--FINISH PHP-->
             </tbody>
         </table>
     </div>
-    <footer>
+    <!-- <footer>
         <div class="row">
             <div class="col-md-6 ms-2">
                 <p>Copyright &copy; Kristiin Tribbeck </p>
             </div>
         </div>
-    </footer>
+    </footer> -->
+    <?php
+    include_once('footer.php');
+    ?>
     <!--FOOTER END -->
 </body>
 

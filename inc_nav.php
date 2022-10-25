@@ -1,6 +1,6 @@
 <nav class="navbar navbar-dark bg-dark fixed-top">
     <div class="container-fluid">
-        <a class="navbar-brand" href="#">Acme Art Gallery</a>
+        <a class="navbar-brand" href="index.php">Acme Art Gallery</a>
         <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas"
             data-bs-target="#offcanvasDarkNavbar" aria-controls="offcanvasDarkNavbar">
             <span class="navbar-toggler-icon"></span>
@@ -16,43 +16,38 @@
                 <div>
                     <ul class="nav flex-column">
                         <li class="nav-item">
-                            <a class="nav-link active" aria-current="page" href="#">Home</a>
+                            <a class="nav-link" href="index.php">Home</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="all-paintings.php">All Paintings</a>
                         </li>
                         <li class="nav-item dropdown">
                             <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
-                                aria-expanded="false">All Paintings</a>
+                                aria-expanded="false">Paintings by Artist</a>
                             <ul class="dropdown-menu dropdown-menu-dark">
-                                <li><a class="dropdown-item" href="#">Full details 1</a></li>
-                                <li><a class="dropdown-item" href="#">Full details 2</a></li>
-                                <li><a class="dropdown-item" href="#">Full details 3</a></li>
-                                <li><a class="dropdown-item" href="#">Full details 4</a></li>
-                                <li><a class="dropdown-item" href="#">Full details 5</a></li>
-                                <li><a class="dropdown-item" href="#">Full details 6</a></li>
-                                <li><a class="dropdown-item" href="#">Full details 7</a></li>
-                                <li><a class="dropdown-item" href="#">Full details 8</a></li>
-                                <li><a class="dropdown-item" href="#">Full details 9</a></li>
-                                <li><a class="dropdown-item" href="#">Full details 10</a></li>
-                                <li><a class="dropdown-item" href="#">Full details 11</a></li>
-                                <li><a class="dropdown-item" href="#">Full details 12</a></li>
-                                <li><a class="dropdown-item" href="#">Full details 13</a></li>
-                                <li><a class="dropdown-item" href="#">Full details 14</a></li>
-                                <li><a class="dropdown-item" href="#">Full details 15</a></li>
-                                <li><a class="dropdown-item" href="#">Full details 16</a></li>
+                                <li><a class="dropdown-item" href="august-renoir.php">August Renoir</a></li>
+                                <li><a class="dropdown-item" href="michelangelo.php">Michelangelo</a></li>
+                                <li><a class="dropdown-item" href="vincent-van-gogh.php">Vincent Van Gogh</a></li>
+                                <li><a class="dropdown-item" href="leonardo-da-vinci.php">Leonardo da Vinci</a></li>
+                                <li><a class="dropdown-item" href="claude-monet.php">Claude Monet</a></li>
+                                <li><a class="dropdown-item" href="pablo-picasso.php">Pablo Picasso</a></li>
+                                <li><a class="dropdown-item" href="salvador-dali.php">Salvador Dali</a></li>
+                                <li><a class="dropdown-item" href="paul-cezanne.php">Paul Cezanne</a></li>
                             </ul>
                         </li>
                         <li class="nav-item dropdown">
                             <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
                                 aria-expanded="false">Paintings by Style</a>
                             <ul class="dropdown-menu dropdown-menu-dark">
-                                <li><a class="dropdown-item" href="#">Impressionism</a></li>
-                                <li><a class="dropdown-item" href="#">Mannerism</a></li>
-                                <li><a class="dropdown-item" href="#">Still-life</a></li>
-                                <li><a class="dropdown-item" href="#">Portrait</a></li>
-                                <li><a class="dropdown-item" href="#">Realism</a></li>
-                                <li><a class="dropdown-item" href="#">Clubism</a></li>
-                                <li><a class="dropdown-item" href="#">Surrealism</a></li>
-                                <li>
+                                <li><a class="dropdown-item" href="impressionism.php">Impressionism</a></li>
+                                <li><a class="dropdown-item" href="mannerism.php">Mannerism</a></li>
+                                <li><a class="dropdown-item" href="still-life.php">Still-life</a></li>
+                                <li><a class="dropdown-item" href="portrait.php">Portrait</a></li>
+                                <li><a class="dropdown-item" href="realism.php">Realism</a></li>
+                                <li><a class="dropdown-item" href="cubism.php">Cubism</a></li>
+                                <li><a class="dropdown-item" href="surrealism.php">Surrealism</a></li>
                             </ul>
+                        </li>
                         <li class="nav-item dropdown">
                             <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
                                 aria-expanded="false">Paintings by Name</a>
@@ -80,11 +75,10 @@
                                 <li><a class="dropdown-item" href="#">Search Bar here?</a></li>
                             </ul>
                         </li>
-                        </li>
                     </ul>
                 </div>
-                <form class="d-flex mt-3" role="search">
-                    <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+                <form class="d-flex mt-3" role="search" action="search.php" method="post">
+                    <input class="form-control me-2" type="search" name="query" placeholder="Search" aria-label="Search">
                     <button class="btn btn-success" type="submit">Search</button>
                 </form>
             </div>
