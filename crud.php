@@ -127,7 +127,7 @@
                     </div>
                     <div class="form-group">
                         <label for="InputPainting">Painting</label>
-                        <input type="text" class="form-control" id="InputPainting" placeholder="Enter the binary data for the image:">
+                        <input type="file" class="form-control" id="InputPainting">
                         <br>
                     </div>
                     <div class="form-group">
