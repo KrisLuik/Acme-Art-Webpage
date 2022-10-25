@@ -67,7 +67,6 @@
                                 <li>
                                     <hr class="dropdown-divider">
                                 </li>
-                                <!-- 
                                 <li><a class="dropdown-item" href="#">Search Painting by name below</a>
                                     <form class="d-flex mt-3" role="search" action="search.php" method="GET">
                                         <input class="form-control me-2" type="search" name="query" placeholder="Search" aria-label="Search">
@@ -76,7 +75,7 @@
                                     
                             </ul>
                         </li>
--->
+                            -->
                         <li class="nav-item">
                             <a class="nav-link" href="crud.php">Update Painting Database</a>
                         </li>
