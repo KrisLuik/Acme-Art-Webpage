@@ -43,50 +43,19 @@
                                 <li><a class="dropdown-item" href="surrealism.php">Surrealism</a></li>
                             </ul>
                         </li>
-                    <!---
                         <li class="nav-item dropdown">
-                            <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">Paintings by Name</a>
+                            <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">Update Painting Database Items</a>
                             <ul class="dropdown-menu dropdown-menu-dark">
-                                <li><a class="dropdown-item" href="#"></a></li>
-                                <li><a class="dropdown-item" href="#">At the Lapin Agile</a></li>
-                                <li><a class="dropdown-item" href="#">Bal du moulin de la Galette</a></li>
-                                <li><a class="dropdown-item" href="#">Cafe Terrace at Night</a></li>
-                                <li><a class="dropdown-item" href="#">Doni Tondo (Doni Madonna)</a></li>
-                                <li><a class="dropdown-item" href="#">Houses of Parliament</a></li>
-                                <li><a class="dropdown-item" href="#">Jaz de Bouffan</a></li>
-                                <li><a class="dropdown-item" href="#">Mona Lisa</a></li>
-                                <li><a class="dropdown-item" href="#">Nature morte au compotier</a></li>
-                                <li><a class="dropdown-item" href="#">Sunrise</a></li>
-                                <li><a class="dropdown-item" href="#">The Hallucinogenic Toreador</a></li>
-                                <li><a class="dropdown-item" href="#">The Persistence of Memory</a></li>
-                                <li><a class="dropdown-item" href="#">The Kingfisher</a></li>
-                                <li><a class="dropdown-item" href="#">The Potato Eaters</a></li>
-                                <li><a class="dropdown-item" href="#">Vase with Twelve Sunflowers</a></li>
-                                <li><a class="dropdown-item" href="#">Vitruvian Man</a></li>
-                                <li><a class="dropdown-item" href="#">Weaver</a></li>
-                                <li>
-                                    <hr class="dropdown-divider">
-                                </li>
-                                <li><a class="dropdown-item" href="#">Search Painting by name below</a>
-                                    <form class="d-flex mt-3" role="search" action="search.php" method="GET">
-                                        <input class="form-control me-2" type="search" name="query" placeholder="Search" aria-label="Search">
-                                        <button class="btn btn-success" type="submit">Search</button>
-                                    </form>
-                                    
+                                <li><a class="dropdown-item" href="addValues.php">Add</a></li>
+                                <li><a class="dropdown-item" href="#">Edit</a></li>
+                                <li><a class="dropdown-item" href="#">Delete</a></li>
+                                <!-- When href is crudTest the link is working-->
+                                <!-- MOST RECENT WORKING HREF <a class="nav-link" href="InsertValuesTest.php">Update Painting Database</a> , 
+                                <a class="nav-link" href="addValues.php">Update Painting Database</a>-->
                             </ul>
-                        </li>
-                            -->
-                        <li class="nav-item">
-                            <a class="nav-link" href="crud.php">Update Painting Database</a>
                         </li>
                     </ul>
                 </div>
-                <!--
-                <form class="d-flex mt-3" role="search" action="search.php" method="post">
-                    <input class="form-control me-2" type="search" name="query" placeholder="Search" aria-label="Search">
-                    <button class="btn btn-success" type="submit">Search</button>
-                </form>
-                -->
             </div>
         </div>
     </div>
