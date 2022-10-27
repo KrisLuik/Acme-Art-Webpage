@@ -121,7 +121,7 @@
     <div class="container-fluid" id="containerStyle">
         <div class="p-3 my-3 border border-info rounded">
             <h2>Assessment Three Group Project</h2>
-            <p class="lead">Name: Kristiin Tribbeck<br>
+            <p class="lead">Name: Kristiin Tribbeck, Kyle Watson, Kirsten Kurinadi<br>
                 ID: 30045325<br>
                 Assessment details: This website utilises the Bootstrap framework to display of a multi-page
                 client-server website
