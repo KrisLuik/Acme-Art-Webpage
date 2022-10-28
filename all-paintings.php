@@ -125,7 +125,6 @@
     <!--Comment out the nav bar later and change the extension to .php when using PHP. End here.-->
   <!-- START PHP -->
  <?php 
- session_start();
     if(isset($_SESSION['message'])){
         ?>
      <div class="alert alert-info text-center" style="margin-top:20px;">
@@ -148,6 +147,7 @@
 <!--Search Bar Finish -->
     <table class="table table-hover" style="margin-top:20px;">
       <thead class="table-secondary">
+		<th>ID</th>
         <th>Title</th>
         <th>Year</th>
         <th>Artist</th>
@@ -163,10 +163,11 @@
          $database = new Connection();
          $db = $database->open();
          try{	
-             $sql = 'SELECT Title, Year_Painted, Artist, Style, Painting FROM Painting_Data';
+             $sql = 'SELECT Id, Title, Year_Painted, Artist, Style, Painting FROM Painting_Data';
              foreach ($db->query($sql) as $row) {
                  ?>
                  <tr>
+					 <td><?php echo $row['Id']; ?></td>
                      <td><?php echo $row['Title']; ?></td>
                      <td><?php echo $row['Year_Painted']; ?></td>
                      <td><?php echo $row['Artist']; ?></td>

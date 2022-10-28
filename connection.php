@@ -3,10 +3,10 @@
 Class Connection{
  
 	private $server = "mysql:host=localhost;dbname=Assessment_3";
-	private $username = "adminer";
-	private $password = "P@ssw0rd";
+	private $username = "root";
+	private $password = "";
 	private $options  = array(PDO::ATTR_ERRMODE => PDO::ERRMODE_EXCEPTION,PDO::ATTR_DEFAULT_FETCH_MODE => PDO::FETCH_ASSOC,);
-	protected $conn;
+	public $conn;
  
 	public function open(){
  		try{
