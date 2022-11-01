@@ -15,6 +15,7 @@
                         <li class="nav-item">
                             <a class="nav-link" href="index.php">Home</a>
                         </li>
+                        <hr>
                         <!--Sprint 2 Start-->
                         <li class="nav-item">
                             <a class="nav-link" href="all-paintings.php">All Artists</a>
@@ -37,6 +38,9 @@
                                 <li><a class="dropdown-item" href="cubism.php">Cubism</a></li>
                                 <li><a class="dropdown-item" href="surrealism.php">Surrealism</a></li>
                             </ul>
+                        </li>
+                        <li class="nav-item"> <!-- Original:  href="crud.php" -->
+                            <a class="nav-link" href="crud.php">Update Artist Database</a>
                         </li>
                         <!--Sprint 2 Finish-->
                         <hr>
