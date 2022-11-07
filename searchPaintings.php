@@ -80,18 +80,14 @@
             } catch (PDOException $e) {
                 echo "There is some problem in connection: " . $e->getMessage();
             }
-            //close connection
             $database->close();
             ?>
-            <!--FINISH PHP-->
             </tbody>
         </table>
     </div>
-    <!-- FOOTER START -->
     <?php
     include_once('footer.php');
     ?>
-    <!--FOOTER END -->
 </body>
 
 </html>

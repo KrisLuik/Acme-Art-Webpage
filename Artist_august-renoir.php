@@ -87,13 +87,9 @@
             </tbody>
         </table>
     </div>
-    <footer>
-        <div class="row">
-            <div class="col-md-6 ms-2">
-                <p>Copyright &copy; Kristiin Tribbeck </p>
-            </div>
-        </div>
-    </footer>
+    <?php
+    include_once('footer.php');
+    ?>
     <!--FOOTER END -->
 </body>
 

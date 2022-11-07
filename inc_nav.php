@@ -18,25 +18,25 @@
                         <hr>
                         <!--Sprint 2 Start-->
                         <li class="nav-item">
-                            <a class="nav-link" href="all-paintings.php">All Artists</a>
+                            <a class="nav-link" href="All_artists.php">All Artists</a>
                         </li>
                         <li class="nav-item dropdown">
                             <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">Artists by Media</a>
                             <ul class="dropdown-menu dropdown-menu-dark">
-                                <li><a class="dropdown-item" href="august-renoir.php">Oil</a></li>
-                                <li><a class="dropdown-item" href="michelangelo.php">Pen-Ink</a></li>
+                                <li><a class="dropdown-item" href="Artist_august-renoir.php">Oil</a></li>
+                                <li><a class="dropdown-item" href="Artist_michelangelo.php">Pen-Ink</a></li>
                             </ul>
                         </li>
                         <li class="nav-item dropdown">
                             <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">Artists by Style</a>
                             <ul class="dropdown-menu dropdown-menu-dark">
-                                <li><a class="dropdown-item" href="impressionism.php">Impressionism</a></li>
-                                <li><a class="dropdown-item" href="mannerism.php">Mannerism</a></li>
-                                <li><a class="dropdown-item" href="still-life.php">Still-life</a></li>
-                                <li><a class="dropdown-item" href="portrait.php">Portrait</a></li>
-                                <li><a class="dropdown-item" href="realism.php">Realism</a></li>
-                                <li><a class="dropdown-item" href="cubism.php">Cubism</a></li>
-                                <li><a class="dropdown-item" href="surrealism.php">Surrealism</a></li>
+                                <li><a class="dropdown-item" href="Style_impressionism.php">Impressionism</a></li>
+                                <li><a class="dropdown-item" href="Style_mannerism.php">Mannerism</a></li>
+                                <li><a class="dropdown-item" href="Style_still-life.php">Still-life</a></li>
+                                <li><a class="dropdown-item" href="Style_portrait.php">Portrait</a></li>
+                                <li><a class="dropdown-item" href="Style_realism.php">Realism</a></li>
+                                <li><a class="dropdown-item" href="Style_cubism.php">Cubism</a></li>
+                                <li><a class="dropdown-item" href="Style_surrealism.php">Surrealism</a></li>
                             </ul>
                         </li>
                         <li class="nav-item"> <!-- Original:  href="crud.php" -->
@@ -50,26 +50,26 @@
                         <li class="nav-item dropdown">
                             <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">Paintings by Artist</a>
                             <ul class="dropdown-menu dropdown-menu-dark">
-                                <li><a class="dropdown-item" href="august-renoir.php">August Renoir</a></li>
-                                <li><a class="dropdown-item" href="michelangelo.php">Michelangelo</a></li>
-                                <li><a class="dropdown-item" href="vincent-van-gogh.php">Vincent Van Gogh</a></li>
-                                <li><a class="dropdown-item" href="leonardo-da-vinci.php">Leonardo da Vinci</a></li>
-                                <li><a class="dropdown-item" href="claude-monet.php">Claude Monet</a></li>
-                                <li><a class="dropdown-item" href="pablo-picasso.php">Pablo Picasso</a></li>
-                                <li><a class="dropdown-item" href="salvador-dali.php">Salvador Dali</a></li>
-                                <li><a class="dropdown-item" href="paul-cezanne.php">Paul Cezanne</a></li>
+                                <li><a class="dropdown-item" href="Artist_august-renoir.php">August Renoir</a></li>
+                                <li><a class="dropdown-item" href="Artist_michelangelo.php">Michelangelo</a></li>
+                                <li><a class="dropdown-item" href="Artist_vincent-van-gogh.php">Vincent Van Gogh</a></li>
+                                <li><a class="dropdown-item" href="Artist_leonardo-da-vinci.php">Leonardo da Vinci</a></li>
+                                <li><a class="dropdown-item" href="Artist_claude-monet.php">Claude Monet</a></li>
+                                <li><a class="dropdown-item" href="Artist_pablo-picasso.php">Pablo Picasso</a></li>
+                                <li><a class="dropdown-item" href="Artist_salvador-dali.php">Salvador Dali</a></li>
+                                <li><a class="dropdown-item" href="Artist_paul-cezanne.php">Paul Cezanne</a></li>
                             </ul>
                         </li>
                         <li class="nav-item dropdown">
                             <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">Paintings by Style</a>
                             <ul class="dropdown-menu dropdown-menu-dark">
-                                <li><a class="dropdown-item" href="impressionism.php">Impressionism</a></li>
-                                <li><a class="dropdown-item" href="mannerism.php">Mannerism</a></li>
-                                <li><a class="dropdown-item" href="still-life.php">Still-life</a></li>
-                                <li><a class="dropdown-item" href="portrait.php">Portrait</a></li>
-                                <li><a class="dropdown-item" href="realism.php">Realism</a></li>
-                                <li><a class="dropdown-item" href="cubism.php">Cubism</a></li>
-                                <li><a class="dropdown-item" href="surrealism.php">Surrealism</a></li>
+                                <li><a class="dropdown-item" href="Style_impressionism.php">Impressionism</a></li>
+                                <li><a class="dropdown-item" href="Style_mannerism.php">Mannerism</a></li>
+                                <li><a class="dropdown-item" href="Style_still-life.php">Still-life</a></li>
+                                <li><a class="dropdown-item" href="Style_portrait.php">Portrait</a></li>
+                                <li><a class="dropdown-item" href="Style_realism.php">Realism</a></li>
+                                <li><a class="dropdown-item" href="Style_cubism.php">Cubism</a></li>
+                                <li><a class="dropdown-item" href="Style_surrealism.php">Surrealism</a></li>
                             </ul>
                         </li>
                         <li class="nav-item"> <!-- Original:  href="crud.php" -->

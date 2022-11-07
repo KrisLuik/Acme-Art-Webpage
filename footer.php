@@ -2,7 +2,7 @@
     <footer>
         <div class="row">
             <div class="col-md-6 ms-2">
-                <p>Copyright &copy; Kristiin Tribbeck </p>
+                <p>Copyright &copy; Rocky Rockets </p>
             </div>
         </div>
     </footer>

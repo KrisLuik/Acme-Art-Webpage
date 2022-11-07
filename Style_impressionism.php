@@ -6,12 +6,13 @@
 ?>
 </head>
 <body>
-    <!-- Grey with black text-->
+
     <?php
 	  include_once('inc_nav.php');
     ?>
   <!-- START PHP -->
  <?php 
+ session_start();
     if(isset($_SESSION['message'])){
         ?>
      <div class="alert alert-info text-center" style="margin-top:20px;">
@@ -26,12 +27,6 @@
 
   <!--Start of table.-->
   <div class="container-fluid" id="containerStyle">
-      <!--Testing Search bar Start, Added action attribte for CrudTest....1) Original File name="InsertValuesTest.php, -->
-  <form class="d-flex mt-3" role="search" action="searchPaintings.php" action="addValues.php" method="GET">
-        <input class="form-control me-2" type="text" name="search" name="submit" placeholder="Search" aria-label="Search">
-        <button class="btn btn-success" type="submit">Search</button>
-    </form>
-<!--Search Bar Finish -->
     <table class="table table-hover" style="margin-top:20px;">
       <thead class="table-secondary">
 		<th>ID</th>
@@ -51,11 +46,11 @@
          $database = new Connection();
          $db = $database->open();
          try{	
-             $sql = 'SELECT Id, Title, Year_Painted, Media, Artist, Style, Painting FROM Painting_Data';
+             $sql = "SELECT Id, Title, Year_Painted, Media, Artist, Style, Painting FROM Painting_Data WHERE Style = 'Impressionism'";
              foreach ($db->query($sql) as $row) {
                  ?>
                  <tr>
-					 <td><?php echo $row['Id']; ?></td>
+        			 <td><?php echo $row['Id']; ?></td>
                      <td><?php echo $row['Title']; ?></td>
                      <td><?php echo $row['Year_Painted']; ?></td>
                      <td><?php echo $row['Media']; ?></td>
@@ -76,9 +71,11 @@
       </tbody>
     </table>
   </div>
+  <!-- FOOTER START -->
     <?php
-    include_once('footer.php');
+    include_once('../footer.php');
     ?>
+    <!--FOOTER END -->
 </body>
 
 </html>

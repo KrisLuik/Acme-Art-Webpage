@@ -6,7 +6,6 @@
     <meta charset="utf-8">
     <!-- Optimize code for mobile devices first and then scale up components as necessary using CSS media queries. -->
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Home | Assessment Three</title>
     <!-- Linking HTML to CSS -->
     <link rel="stylesheet" href="assessment_3.css">
     <!-- Bootstrap CSS -->
@@ -14,6 +13,7 @@
     <!-- Option 1: Bootstrap Bundle with Popper -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
     <script src="crudfunctions.js"></script>
+    <title>Home | Assessment Three</title>
 </head>
 
 <body>
@@ -37,8 +37,8 @@
                         <br>
                     </div>
                     <div class="form-group">
-                        <label for="InputPainting">Painting</label> 
-                        <input type="file" class="form-control" name="InputPainting" placeholder="Enter the binary data for the image:">
+                        <label for="InputPainting">Painting</label>
+                        <input type="file" class="form-control"name="InputPainting" placeholder="Enter the binary data for the image:">
                         <br>
                     </div>
                     <div class="form-group">
@@ -62,21 +62,17 @@
                         <br>
                     </div>
                     <div>
-                    <input type="submit" value="Add" name="buttonAdd" class="btn btn-primary">
-					<input type="submit" value="Edit"name="buttonEdit" class="btn btn-primary">
-					<input type="submit" value="Delete"name="buttonDelete" class="btn btn-primary">
+                    <input type="submit" value="Add" name="buttonAdd" class="btn btn-success">
+					<input type="submit" value="Edit"name="buttonEdit" class="btn btn-success">
+					<input type="submit" value="Delete"name="buttonDelete" class="btn btn-success">
                     <br>
                     </div>
                 </form>
         </div>
     </div>
-    <footer>
-        <div class="row">
-            <div class="col-md-6 ms-2">
-                <p>Copyright &copy; Kristiin Tribbeck </p>
-            </div>
-        </div>
-    </footer>
+    <?php
+    include_once('footer.php');
+    ?>
 </body>
 
 </html>
