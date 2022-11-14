@@ -70,7 +70,7 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
         $sql = "INSERT INTO Artist_Data(Artist, Lifespan, Thumbnail, Portrait)
         VALUES(:Artist, :Lifespan, :Thumbnail, :Portrait)";
         foreach ($details as $details) {
-            $stmt = $pdo->prepare($sql);
+            $stmt = $db->prepare($sql);
             $stmt->execute($details);
         }
     }
