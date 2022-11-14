@@ -38,7 +38,7 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
         // Verify MIME type of the file
         if(in_array($filetype, $allowed)){
             // Check whether file exists before uploading it
-            $portrait = "portrait/" . $filename;
+            $portrait = "portrait/" . basename($filename);
             if(file_exists($portrait)){
                 echo $filename . " already exists.";
             } else{
@@ -56,7 +56,7 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
         list($width, $height, $type) = getimagesize($portrait);
         $input_portrait = load_portrait($portrait, $type);
         $output_thumbnail = resize_image(100, $input_portrait, $width, $height);
-        $thumbnail = "thumbnail/" . $filename;
+        $thumbnail = "thumbnail/" . basename($filename);
         imagepng($output_thumbnail, $thumbnail);
     } else{
         $portrait_err = "Error: " . $_FILES["InputPortrait"]["error"];
