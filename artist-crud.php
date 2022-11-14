@@ -58,6 +58,8 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
         $portrait_err = "Error: " . $_FILES["InputPortrait"]["error"];
     }
 
+    $database = new Connection();
+	$db = $database->open();
     if (empty($artist_err) && empty($lifespan_err) && empty($portrait_err)) {
         $details[] = [
             'Artist' => $artist,
@@ -72,6 +74,7 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
             $stmt->execute($details);
         }
     }
+    $database->close();
 }
 ?>
 <!doctype html>
