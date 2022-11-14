@@ -42,8 +42,12 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
             if(file_exists($portrait)){
                 echo $filename . " already exists.";
             } else{
-                move_uploaded_file($_FILES["InputPortrait"]["tmp_name"], $portrait);
-                echo "Your file was uploaded successfully.";
+                $fileUploaded = move_uploaded_file($_FILES["InputPortrait"]["tmp_name"], $portrait);
+                if ($fileUploaded) {
+                    echo "Your file was uploaded successfully.";
+                } else {
+                    $portrait_err = "Error: The file did not upload :(";
+                }
             } 
         } else{
             $portrait_err = "Error: There was a problem uploading your file. Please try again."; 
