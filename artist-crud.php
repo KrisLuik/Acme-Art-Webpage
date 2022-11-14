@@ -65,7 +65,7 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
             'Thumbnail' => file_get_contents($thumbnail),
             'Portrait' => file_get_contents($portrait)
         ];
-        $sql = "INSERT INTO Artist_Data(Artist, Lifespan, Portrait)
+        $sql = "INSERT INTO Artist_Data(Artist, Lifespan, Thumbnail, Portrait)
         VALUES(:Artist, :Lifespan, :Thumbnail, :Portrait)";
         foreach ($details as $details) {
             $stmt = $pdo->prepare($sql);
