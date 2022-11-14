@@ -18,7 +18,7 @@
                         <hr>
                         <!--Sprint 2 Start-->
                         <li class="nav-item">
-                            <a class="nav-link" href="All_artists.php">All Artists</a>
+                            <a class="nav-link" href="all_artists.php">All Artists</a>
                         </li>
                         <li class="nav-item dropdown">
                             <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">Artists by Media</a>
