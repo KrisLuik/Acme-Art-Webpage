@@ -29,11 +29,13 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
     
         // Verify file extension
         $ext = pathinfo($filename, PATHINFO_EXTENSION);
-        if(!array_key_exists($ext, $allowed)) die("Error: Please select a valid file format.");
+        if(!array_key_exists($ext, $allowed)) 
+            $portrait_err = ("Error: Please select a valid file format.");
     
         // Verify file size - 16MB maximum
         $maxsize = 16777215;
-        if($filesize > $maxsize) die("Error: File size is larger than the allowed limit.");
+        if($filesize > $maxsize)
+            $portrait_err = ("Error: File size is larger than the allowed limit.");
     
         // Verify MIME type of the file
         if(in_array($filetype, $allowed)){
@@ -42,12 +44,8 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
             if(file_exists($portrait)){
                 echo $filename . " already exists.";
             } else{
-                $fileUploaded = move_uploaded_file($_FILES["InputPortrait"]["tmp_name"], $portrait);
-                if ($fileUploaded) {
-                    echo "Your file was uploaded successfully.";
-                } else {
-                    $portrait_err = "Error: The file did not upload :(";
-                }
+                $uploaded_file = $_FILES["InputPortrait"]["tmp_name"];
+                $file_content = addslashes(file_get_contents($uploaded_file));
             } 
         } else{
             $portrait_err = "Error: There was a problem uploading your file. Please try again."; 
