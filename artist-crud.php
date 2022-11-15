@@ -106,7 +106,10 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
     <div class="container-fluid" id="containerStyle">
         <div class="p-3 my-3 border border-info rounded">
             <h2>Update Artist Database</h2>
-           <!-- <form action="create.php" method="POST">    COMMENT: use multipart/form-data when your form includes any <input type="file"> elements-->
+            <!-- <form action="create.php" method="POST">    COMMENT: use multipart/form-data when your form includes any <input type="file"> elements-->
+            <div class="alert alert-danger<?php echo (!empty($database_err)) ? 'visible' : ''; ?>" role="alert">
+                <?php echo $database_err;?>
+            </div>
             <form action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]); ?>" method="POST" enctype="multipart/form-data">
 			        <div class="form-group">
                         <label for="InputArtist">Artist Name</label>
