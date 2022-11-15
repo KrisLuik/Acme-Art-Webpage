@@ -39,14 +39,8 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
     
         // Verify MIME type of the file
         if(in_array($filetype, $allowed)){
-            // Check whether file exists before uploading it
-            $portrait = "portrait/" . basename($filename);
-            if(file_exists($portrait)){
-                echo $filename . " already exists.";
-            } else{
-                $uploaded_file = $_FILES["InputPortrait"]["tmp_name"];
-                $file_content = addslashes(file_get_contents($uploaded_file));
-            } 
+            $portrait = $_FILES["InputPortrait"]["tmp_name"];
+            $file_content = addslashes(file_get_contents($portrait));
         } else{
             $portrait_err = "Error: There was a problem uploading your file. Please try again."; 
         }
@@ -67,7 +61,7 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
             'Artist' => $artist,
             'Lifespan' => $lifespan,
             'Thumbnail' => file_get_contents($thumbnail),
-            'Portrait' => file_get_contents($portrait)
+            'Portrait' => $file_content
         ];
         $sql = "INSERT INTO Artist_Data(Artist, Lifespan, Thumbnail, Portrait)
         VALUES(:Artist, :Lifespan, :Thumbnail, :Portrait)";
