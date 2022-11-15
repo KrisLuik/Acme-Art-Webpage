@@ -107,25 +107,31 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
         <div class="p-3 my-3 border border-info rounded">
             <h2>Update Artist Database</h2>
             <!-- <form action="create.php" method="POST">    COMMENT: use multipart/form-data when your form includes any <input type="file"> elements-->
-            <div class="alert alert-danger<?php echo (!empty($database_err)) ? 'visible' : 'invisible'; ?>" role="alert">
-                <?php echo $database_err;?>
-            </div>
+            <?php
+                if(!empty($database_err)){
+                    ?>
+                    <div class="alert alert-danger" role="alert">
+                        <?php echo $database_err; ?>
+                    </div>
+                    <?php
+                }
+            ?>
             <form action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]); ?>" method="POST" enctype="multipart/form-data">
 			        <div class="form-group">
                         <label for="InputArtist">Artist Name</label>
-                        <input type="text" class="form-control<?php echo (!empty($name_err)) ? 'is-invalid' : ''; ?>" name="InputArtist" placeholder="Enter the artist's name:">
+                        <input type="text" class="form-control <?php echo (!empty($name_err)) ? 'is-invalid' : ''; ?>" name="InputArtist" placeholder="Enter the artist's name:">
                         <span class="invalid-feedback"><?php echo $name_err;?></span>
                         <br>
                     </div>
                     <div class="form-group">
                         <label for="InputLifeSpan">Lifespan</label>
-                        <input type="text" class="form-control<?php echo (!empty($lifespan_err)) ? 'is-invalid' : ''; ?>" name="InputLifeSpan" placeholder="Enter the artist lifespan:">
+                        <input type="text" class="form-control <?php echo (!empty($lifespan_err)) ? 'is-invalid' : ''; ?>" name="InputLifeSpan" placeholder="Enter the artist lifespan:">
                         <span class="invalid-feedback"><?php echo $lifespan_err;?></span>
                         <br>
                     </div>
                     <div class="form-group">
                         <label for="InputPortrait">Portrait</label>
-                        <input type="file" class="form-control<?php echo (!empty($portrait_err)) ? 'is-invalid' : ''; ?>"name="InputPortrait" placeholder="Portrait of the artist:">
+                        <input type="file" class="form-control <?php echo (!empty($portrait_err)) ? 'is-invalid' : ''; ?>"name="InputPortrait" placeholder="Portrait of the artist:">
                         <span class="invalid-feedback"><?php echo $portrait_err;?></span>
                         <br>
                     </div>
