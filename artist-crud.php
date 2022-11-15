@@ -40,7 +40,7 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
         // Verify MIME type of the file
         if(in_array($filetype, $allowed)){
             $temp_portrait = $_FILES["InputPortrait"]["tmp_name"];
-            $portrait = stripslashes(file_get_contents($temp_portrait));
+            $portrait = file_get_contents($temp_portrait);
         } else{
             $portrait_err = "Error: There was a problem uploading your file. Please try again."; 
         }
