@@ -3,7 +3,7 @@ require_once("connection.php");
 require_once("generateThumbnail.php");
 // Initialise variables
 $artist = $lifespan = $thumbnail = $portrait = "";
-$artist_err = $lifespan_err = $portrait_err = "";
+$artist_err = $lifespan_err = $portrait_err = $database_err = "";
 // Check if the form was submitted
 if($_SERVER["REQUEST_METHOD"] == "POST"){
     // Validate artist name
@@ -59,18 +59,23 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
     $database = new Connection();
 	$db = $database->open();
     if (empty($artist_err) && empty($lifespan_err) && empty($portrait_err)) {
-        $details[] = [
-            'Artist' => $artist,
-            'Lifespan' => $lifespan,
-            'Thumbnail' => $thumbnail,
-            'Portrait' => $portrait
-        ];
-        $sql = "INSERT INTO Artist_Data(Artist, Lifespan, Thumbnail, Portrait)
-        VALUES(:Artist, :Lifespan, :Thumbnail, :Portrait)";
-        foreach ($details as $details) {
-            $stmt = $db->prepare($sql);
-            $stmt->execute($details);
+        try {
+            $details[] = [
+                'Artist' => $artist,
+                'Lifespan' => $lifespan,
+                'Thumbnail' => $thumbnail,
+                'Portrait' => $portrait
+            ];
+            $sql = "INSERT INTO Artist_Data(Artist, Lifespan, Thumbnail, Portrait)
+            VALUES(:Artist, :Lifespan, :Thumbnail, :Portrait)";
+            foreach ($details as $details) {
+                $stmt = $db->prepare($sql);
+                $stmt->execute($details);
+            }
+        } catch (PDOException $e) {
+            $database_err = $e->getMessage();
         }
+        
     }
     $database->close();
 }
