@@ -39,8 +39,8 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
     
         // Verify MIME type of the file
         if(in_array($filetype, $allowed)){
-            $portrait = $_FILES["InputPortrait"]["tmp_name"];
-            $file_content = file_get_contents($portrait);
+            $temp_portrait = $_FILES["InputPortrait"]["tmp_name"];
+            $portrait = file_get_contents($temp_portrait);
         } else{
             $portrait_err = "Error: There was a problem uploading your file. Please try again."; 
         }
@@ -48,8 +48,10 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
         list($width, $height, $type) = getimagesize($portrait);
         $input_portrait = load_portrait($portrait, $type);
         $output_thumbnail = resize_image(100, $input_portrait, $width, $height);
-        $thumbnail = "thumbnail/" . basename($filename);
-        imagepng($output_thumbnail, $thumbnail);
+        ob_start();
+        imagepng($output_thumbnail);
+        $thumbnail = ob_get_contents();
+        ob_end_clean();
     } else{
         $portrait_err = "Error: " . $_FILES["InputPortrait"]["error"];
     }
@@ -60,8 +62,8 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
         $details[] = [
             'Artist' => $artist,
             'Lifespan' => $lifespan,
-            'Thumbnail' => file_get_contents($thumbnail),
-            'Portrait' => $file_content
+            'Thumbnail' => $thumbnail,
+            'Portrait' => $portrait
         ];
         $sql = "INSERT INTO Artist_Data(Artist, Lifespan, Thumbnail, Portrait)
         VALUES(:Artist, :Lifespan, :Thumbnail, :Portrait)";
