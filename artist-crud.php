@@ -3,7 +3,7 @@ require_once("connection.php");
 require_once("generateThumbnail.php");
 // Initialise variables
 $artist = $lifespan = $thumbnail = $portrait = "";
-$artist_err = $lifespan_err = $portrait_err = $database_err = "";
+$artist_err = $lifespan_err = $portrait_err = $database_err = $success_msg = "";
 // Check if the form was submitted
 if($_SERVER["REQUEST_METHOD"] == "POST"){
     // Validate artist name
@@ -72,10 +72,10 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
                 $stmt = $db->prepare($sql);
                 $stmt->execute($details);
             }
+            $success_msg = "Artist successfully added to the database";
         } catch (PDOException $e) {
             $database_err = $e->getMessage();
         }
-        
     }
     $database->close();
 }
@@ -112,6 +112,12 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
                     ?>
                     <div class="alert alert-danger" role="alert">
                         <?php echo $database_err; ?>
+                    </div>
+                    <?php
+                } elseif (!empty($success_msg)){
+                    ?>
+                    <div class="alert alert-success" role="alert">
+                        <?php echo $success_msg; ?>
                     </div>
                     <?php
                 }
