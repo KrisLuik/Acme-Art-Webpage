@@ -4,6 +4,7 @@
 <?php
 	include_once('head.php');
 ?>
+<title>All Paintings | Acme Art Gallery</title>
 </head>
 <body>
     <!-- Grey with black text-->

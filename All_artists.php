@@ -5,6 +5,7 @@
     <?php
     include_once('head.php');
     ?>
+    <title>All Artists | Acme Art Gallery</title>
 </head>
 
 <body>

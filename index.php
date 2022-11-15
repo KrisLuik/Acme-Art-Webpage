@@ -4,6 +4,7 @@
 <?php
 	include_once('head.php');
 ?>
+<title>Home | Acme Art Gallery</title>
 </head>
 
 <body>
@@ -17,7 +18,7 @@
     <div class="container-fluid" id="containerStyle">
         <div class="p-3 my-3 border border-info rounded">
             <h2>Assessment Three Group Project</h2>
-            <p class="lead">Name: Kristiin Tribbeck, Kyle Watson, Kirsten Kurinadi<br>
+            <p class="lead">Name: Kristiin Tribbeck, Kyle Watson, Kirsten Kurniadi<br>
                 ID: 30045325<br>
                 Assessment details: This website utilises the Bootstrap framework to display of a multi-page
                 client-server website
@@ -26,7 +27,7 @@
                 <ul>
                     <li>Sprint 1 - Kristiin Tribbeck - Paintings Section</li>
                     <li>Sprint 2 - Kyle Watson - Artists Section</li>
-                    <li>Sprint 3 - Kirsten Kurinadi</li>
+                    <li>Sprint 3 - Kirsten Kurniadi</li>
                 </ul>
             </p>
         </div>
