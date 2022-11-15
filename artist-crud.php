@@ -119,8 +119,8 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
             <form action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]); ?>" method="POST" enctype="multipart/form-data">
 			        <div class="form-group">
                         <label for="InputArtist">Artist Name</label>
-                        <input type="text" class="form-control <?php echo (!empty($name_err)) ? 'is-invalid' : ''; ?>" name="InputArtist" placeholder="Enter the artist's name:">
-                        <span class="invalid-feedback"><?php echo $name_err;?></span>
+                        <input type="text" class="form-control <?php echo (!empty($artist_err)) ? 'is-invalid' : ''; ?>" name="InputArtist" placeholder="Enter the artist's name:">
+                        <span class="invalid-feedback"><?php echo $artist_err;?></span>
                         <br>
                     </div>
                     <div class="form-group">
