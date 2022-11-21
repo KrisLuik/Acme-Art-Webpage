@@ -40,7 +40,7 @@
                             </ul>
                         </li>
                         <li class="nav-item"> <!-- Original:  href="crud.php" -->
-                            <a class="nav-link" href="artist-crud.php">Update Artist Database</a>
+                            <a class="nav-link" href="Artist_form.php">Update Artist Database</a>
                         </li>
                         <!--Sprint 2 Finish-->
                         <hr>
