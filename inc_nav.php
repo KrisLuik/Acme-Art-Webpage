@@ -23,8 +23,8 @@
                         <li class="nav-item dropdown">
                             <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">Artists by Media</a>
                             <ul class="dropdown-menu dropdown-menu-dark">
-                                <li><a class="dropdown-item" href="Artist_august-renoir.php">Oil</a></li>
-                                <li><a class="dropdown-item" href="Artist_michelangelo.php">Pen-Ink</a></li>
+                                <li><a class="dropdown-item" href="Artist_by_media_oil.php">Oil</a></li>
+                                <li><a class="dropdown-item" href="Artist_by_media_pen_ink.php">Pen-Ink</a></li>
                             </ul>
                         </li>
                         <li class="nav-item dropdown">
