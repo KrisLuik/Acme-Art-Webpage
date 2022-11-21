@@ -1,9 +1,9 @@
-  <!-- START PHP -->
-  <?php 
-    if(!isset($_SESSION['loggedin']) || $_SESSION['loggedin'] == false){
-        header("location: login.php");
-        exit;
- }
+<!-- START PHP -->
+<?php 
+if(!isset($_SESSION['loggedin']) || $_SESSION['loggedin'] == false) {
+    header("location: login.php");
+    exit;
+}
 ?>
 <!-- FINISH PHP-->
 <!doctype html>
@@ -12,42 +12,27 @@
 <?php
 	include_once('head.php');
 ?>
-<title>Change Subscriptions | Acme Art Gallery</title>
+<title>Manage Subscriptions | Acme Art Gallery</title>
 </head>
 <body>
     <!-- Grey with black text-->
     <?php
 	  include_once('inc_nav.php');
     ?>
-  <!--Start of table.-->
-  <div class="container-fluid" id="containerStyle">
+    <h1>Hello, <?php echo $_SESSION["fullName"]; ?></h1>
+    <!--Start of table.-->
+    <div class="container-fluid" id="containerStyle">
+        <p>Subscription settings for <?php echo $_SESSION["email"]; ?>:</p>
       <!--Testing Search bar Start, Added action attribte for CrudTest....1) Original File name="InsertValuesTest.php, -->
-  <form class="d-flex mt-3" role="search" action="searchUsers.php" method="GET">
-        <input class="form-control me-2" type="text" name="search" name="submit" placeholder="Search" aria-label="Search">
-        <button class="btn btn-success" type="submit">Search</button>
-    </form>
-<!--Search Bar Finish -->
-    <table class="table table-hover" style="margin-top:20px;">
-      <thead class="table-secondary">
-		<th>ID</th>
-        <th>Name</th>
-        <th>Email</th>
-        <th>Newsletter</th>
-        <th>Newsflash</th>
-        <th>Delete Account?</th>
-        <th>Is Admin?</th>
-      </thead>
-      <tbody>
+        <form class="d-flex mt-3" action="updateSubscription.php" method="POST" enctype="multipart/form-data">
         <!--PHP START-->
-     <?php
+        <?php
          //include our connection
-         include_once('connection.php');
-
-         $database = new Connection();
-         $db = $database->open();
-         try{	
-             $sql = 'SELECT Id, FullName, Email, Newsletter, Newsflash, DeleteAccount, IsAdmin FROM Painting_Data';
-             foreach ($db->query($sql) as $row) {
+        $database = new Connection();
+        $db = $database->open();
+        try{	
+            $sql = 'SELECT Id, FullName, Email, Newsletter, Newsflash, DeleteAccount, IsAdmin FROM MembershipDatabase';
+            foreach ($db->query($sql) as $row) {
                  ?>
                  <tr>
 					 <td><?php echo $row['Id']; ?></td>
@@ -68,8 +53,10 @@
          $database->close();
      ?>
     <!--FINISH PHP-->
-      </tbody>
-    </table>
+        <input class="form-control me-2" type="text" name="search" name="submit" placeholder="Search" aria-label="Search">
+        <button class="btn btn-success" type="submit">Update</button>
+        </form>
+<!--Search Bar Finish -->
   </div>
     <?php
     include_once('footer.php');

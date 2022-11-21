@@ -1,5 +1,5 @@
-  <!-- START PHP -->
-  <?php 
+<!-- START PHP -->
+<?php 
     if(!isset($_SESSION['loggedin']) || $_SESSION['isAdmin'] == 'n'){
         http_response_code(403);
         exit;
