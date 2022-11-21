@@ -1,20 +1,23 @@
 <!doctype html>
 <html lang="en">
-<head>
+<head>  
 <?php
 	include_once('head.php');
 ?>
-<title>All Paintings | Acme Art Gallery</title>
 </head>
+
 <body>
     <!-- Grey with black text-->
     <?php
 	  include_once('inc_nav.php');
+      /* test below file to check if footer works. 
+      include_once('footer.php'); */
     ?>
-  <!-- START PHP -->
+    <!--PHP START-->
  <?php 
-    if(isset($_SESSION['message'])){
-        ?>
+ session_start();
+ if(isset($_SESSION['message'])){
+     ?>
      <div class="alert alert-info text-center" style="margin-top:20px;">
          <?php echo $_SESSION['message']; ?>
      </div>
@@ -23,28 +26,22 @@
      unset($_SESSION['message']);
  }
 ?>
-<!-- FINISH PHP-->
+<!--FINISH PHP-->
 
-  <!--Start of table.-->
-  <div class="container-fluid" id="containerStyle">
-      <!--Testing Search bar Start, Added action attribte for CrudTest....1) Original File name="InsertValuesTest.php, -->
-  <form class="d-flex mt-3" role="search" action="searchPaintings.php" action="addValues.php" method="GET">
-        <input class="form-control me-2" type="text" name="search" name="submit" placeholder="Search" aria-label="Search">
-        <button class="btn btn-success" type="submit">Search</button>
-    </form>
-<!--Search Bar Finish -->
-    <table class="table table-hover" style="margin-top:20px;">
-      <thead class="table-secondary">
-		<th>ID</th>
-        <th>Title</th>
-        <th>Year</th>
-        <th>Media</th>
-        <th>Artist</th>
-        <th>Style</th>
-        <th>Thumbnail</th>
-      </thead>
-      <tbody>
-        <!--PHP START-->
+    <!--Start of table.-->
+    <div class="container-fluid" id="containerStyle">
+        <table class="table table-hover" style="margin-top:20px;">
+            <thead class="table-secondary">
+				<th>ID</th>
+        		<th>Title</th>
+        		<th>Year</th>
+        		<th>Media</th>
+        		<th>Artist</th>
+        		<th>Style</th>
+        		<th>Thumbnail</th>
+            </thead>
+            <tbody>
+                <!--PHP START-->
      <?php
          //include our connection
          include_once('connection.php');
@@ -52,11 +49,11 @@
          $database = new Connection();
          $db = $database->open();
          try{	
-             $sql = 'SELECT Id, Title, Year_Painted, Media, Artist, Style, Painting FROM Painting_Data';
+             $sql = "SELECT Id, Title, Year_Painted, Media, Artist, Style, Painting FROM Painting_Data WHERE Artist = 'Pablo Picasso'";
              foreach ($db->query($sql) as $row) {
                  ?>
                  <tr>
-					 <td><?php echo $row['Id']; ?></td>
+   					 <td><?php echo $row['Id']; ?></td>
                      <td><?php echo $row['Title']; ?></td>
                      <td><?php echo $row['Year_Painted']; ?></td>
                      <td><?php echo $row['Media']; ?></td>
@@ -74,12 +71,20 @@
          $database->close();
      ?>
     <!--FINISH PHP-->
-      </tbody>
-    </table>
-  </div>
+            </tbody>
+        </table>
+    </div>
+    <!-- <footer>
+        <div class="row">
+            <div class="col-md-6 ms-2">
+                <p>Copyright &copy; Kristiin Tribbeck </p>
+            </div>
+        </div>
+    </footer> -->
     <?php
     include_once('footer.php');
     ?>
+    <!--FOOTER END -->
 </body>
 
 </html>

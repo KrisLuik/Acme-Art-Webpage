@@ -18,13 +18,13 @@
                         <hr>
                         <!--Sprint 2 Start-->
                         <li class="nav-item">
-                            <a class="nav-link" href="All_artists.php">All Artists</a>
+                            <a class="nav-link" href="all_artists.php">All Artists</a>
                         </li>
                         <li class="nav-item dropdown">
                             <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">Artists by Media</a>
                             <ul class="dropdown-menu dropdown-menu-dark">
-                                <li><a class="dropdown-item" href="Artist_august-renoir.php">Oil</a></li>
-                                <li><a class="dropdown-item" href="Artist_michelangelo.php">Pen-Ink</a></li>
+                                <li><a class="dropdown-item" href="Artist_by_media_oil.php">Oil</a></li>
+                                <li><a class="dropdown-item" href="Artist_by_media_pen_ink.php">Pen-Ink</a></li>
                             </ul>
                         </li>
                         <li class="nav-item dropdown">
@@ -40,7 +40,7 @@
                             </ul>
                         </li>
                         <li class="nav-item"> <!-- Original:  href="crud.php" -->
-                            <a class="nav-link" href="crud.php">Update Artist Database</a>
+                            <a class="nav-link" href="Artist_form.php">Update Artist Database</a>
                         </li>
                         <!--Sprint 2 Finish-->
                         <hr>
