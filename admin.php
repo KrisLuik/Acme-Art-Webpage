@@ -1,6 +1,6 @@
   <!-- START PHP -->
   <?php 
-    if($_SESSION['isAdmin'] != 'y'){
+    if(!isset($_SESSION['loggedin']) || $_SESSION['isAdmin'] == 'n'){
         http_response_code(403);
         exit;
  }
